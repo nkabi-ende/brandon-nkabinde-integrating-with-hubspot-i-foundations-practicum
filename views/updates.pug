@@ -1,0 +1,39 @@
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    div.container
+      h1 Add New Video Game
+      
+      p
+        a(href='/') Return to the homepage
+      
+      form(method='POST', action='/update-cobj')
+        div.form-group
+          label(for='name') Name (Required):
+          br
+          input#name(type='text', name='name', required, placeholder='Enter game name')
+        
+        br
+        
+        div.form-group
+          label(for='genre') Genre:
+          br
+          input#genre(type='text', name='genre', placeholder='e.g., Adventure, Shooter')
+        
+        br
+        
+        div.form-group
+          label(for='rating') Rating:
+          br
+          select#rating(name='rating')
+            option(value='') Select rating
+            option(value='everyone') Everyone
+            option(value='teen') Teen
+            option(value='mature') Mature
+        
+        br
+        br
+        
+        button(type='submit') Add Game
